@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - My Profile</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">RentEase</div>
+    <nav class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="listings.html">My Listings</a>
+      <a href="rentals.html">My Rentals</a>
+      <div class="account-dropdown">
+        <button class="account-btn">
+          <i class="fas fa-user-circle"></i>
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="profile.html">My Profile</a>
+          <a href="#" id="logout-btn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="profile-container">
+    <section class="profile-section">
+      <h1>My Profile</h1>
+      <div class="profile-pic-container">
+        <img id="profile-pic" src="https://via.placeholder.com/150" alt="Profile Picture">
+        <label for="profile-pic-input" class="change-pic-btn">Change Photo</label>
+        <input type="file" id="profile-pic-input" accept="image/*">
+      </div>
+      
+      <form id="profile-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" disabled>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" disabled>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" rows="3"></textarea>
+        </div>
+        <button type="submit" class="save-btn">Save Changes</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/header.js"></script>
+  <script src="../js/profile.js"></script>
+</body>
+</html>

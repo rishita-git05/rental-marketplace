@@ -1,0 +1,249 @@
+:root {
+    --primary-blue: #2563EB;
+    --secondary-blue: #3B82F6;
+    --accent-green: #10B981;
+    --dark: #1F2937;
+    --light: #F9FAFB;
+    --white: #FFFFFF;
+    --red: #EF4444;
+  }
+  /* Header Styles - Same for all pages */
+  
+ .header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-blue);
+  }
+  
+  .nav-links a.active {
+    color: var(--primary-blue);
+  }
+  
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+  }
+  
+  .register-btn {
+    background-color: var(--primary-blue);
+    color: white !important;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .register-btn:hover {
+    background-color: var(--secondary-blue);
+  }
+  
+  /* Footer Styles - Same for all pages */
+  .footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 3rem 5% 2rem;
+    margin-top: auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .link-group h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+  
+  .link-group a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .link-group a:hover {
+    color: var(--accent-green);
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+  
+  /* Back Home Link - For pages that need it */
+  .back-home {
+    padding: 1.5rem 5%;
+  }
+  
+  .back-home a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  .back-home a:hover {
+    color: var(--secondary-blue);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    
+    .nav-links {
+      width: 100%;
+      justify-content: space-around;
+      gap: 0.5rem;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .footer-links {
+      gap: 1.5rem;
+    }
+  }
+
+  .account-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .account-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .account-btn:hover {
+    background-color: rgba(37, 99, 235, 0.1);
+  }
+  
+  .account-btn i.fa-user-circle {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    color: var(--dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--light);
+  }
+  
+  .account-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: var(--accent-green);
+  }
+  

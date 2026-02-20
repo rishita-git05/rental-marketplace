@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - Login or Register</title>
+  <link rel="stylesheet" href="../css/Authentication.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Back to Home Link -->
+  <nav class="back-home" aria-label="Back to homepage">
+    <a href="LandingPage.html" class="back-link">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i> 
+      <span>Back to Home</span>
+    </a>
+  </nav>
+
+  <!-- Main Auth Container -->
+  <main class="auth-container">
+    
+    <!-- Toggle Switch -->
+    <div class="toggle-switch" role="tablist" aria-label="Authentication tabs">
+      <button 
+        id="login-toggle" 
+        class="active" 
+        role="tab" 
+        aria-selected="true" 
+        aria-controls="login-form"
+      >
+        Login
+      </button>
+      <button 
+        id="register-toggle" 
+        role="tab" 
+        aria-selected="false" 
+        aria-controls="register-form"
+      >
+        Register
+      </button>
+    </div>
+
+    <!-- Login Form -->
+    <form 
+      id="login-form" 
+      class="auth-form active" 
+      role="tabpanel" 
+      aria-labelledby="login-toggle"
+    >
+      <h2>Welcome Back!</h2>
+      
+      <div class="input-group">
+        <label for="login-email">Email Address</label>
+        <input 
+          type="email" 
+          id="login-email" 
+          name="email"
+          placeholder="Enter your email" 
+          required
+          aria-describedby="login-email-error"
+          autocomplete="email"
+        >
+        <span id="login-email-error" class="error-message" aria-live="polite"></span>
+      </div>
+      
+      <div class="input-group">
+        <label for="login-password">Password</label>
+        <input 
+          type="password" 
+          id="login-password" 
+          name="password"
+          placeholder="Enter your password" 
+          required
+          aria-describedby="login-password-error"
+          autocomplete="current-password"
+        >
+        <span id="login-password-error" class="error-message" aria-live="polite"></span>
+        <a href="#" class="forgot-password" aria-label="Forgot password?">Forgot password?</a>
+      </div>
+      
+      <button type="submit" class="auth-btn" aria-label="Login to your account">
+        <span class="btn-text">Login</span>
+        <span class="loading-spinner" aria-hidden="true"></span>
+      </button>
+      
+      <p class="toggle-hint">
+        Don't have an account? 
+        <a href="#" id="switch-to-register" class="toggle-link" aria-label="Switch to registration form">
+          Register
+        </a>
+      </p>
+      
+      <div class="social-login">
+        <p class="divider">Or login with:</p>
+        <div class="social-icons">
+          <a href="#" class="social-btn google" aria-label="Login with Google">
+            <i class="fab fa-google" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="social-btn facebook" aria-label="Login with Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </form>
+
+    <!-- Register Form -->
+    <form 
+      id="register-form" 
+      class="auth-form" 
+      role="tabpanel" 
+      aria-labelledby="register-toggle"
+      aria-hidden="true"
+    >
+      <h2>Create an Account</h2>
+      
+      <div class="input-group">
+        <label for="register-name">Full Name</label>
+        <input 
+          type="text" 
+          id="register-name" 
+          name="name"
+          placeholder="Enter your name" 
+          required
+          aria-describedby="register-name-error"
+          autocomplete="name"
+        >
+        <span id="register-name-error" class="error-message" aria-live="polite"></span>
+      </div>
+      
+      <div class="input-group">
+        <label for="register-email">Email Address</label>
+        <input 
+          type="email" 
+          id="register-email" 
+          name="email"
+          placeholder="Enter your email" 
+          required
+          aria-describedby="register-email-error"
+          autocomplete="email"
+        >
+        <span id="register-email-error" class="error-message" aria-live="polite"></span>
+      </div>
+      
+      <div class="input-group">
+        <label for="register-password">Password</label>
+        <input 
+          type="password" 
+          id="register-password" 
+          name="password"
+          placeholder="Create a password (min 8 characters)" 
+          required
+          aria-describedby="register-password-error"
+          autocomplete="new-password"
+        >
+        <span id="register-password-error" class="error-message" aria-live="polite"></span>
+      </div>
+      
+      <div class="input-group">
+        <label for="register-confirm">Confirm Password</label>
+        <input 
+          type="password" 
+          id="register-confirm" 
+          name="confirm-password"
+          placeholder="Confirm your password" 
+          required
+          aria-describedby="register-confirm-error"
+          autocomplete="new-password"
+        >
+        <span id="register-confirm-error" class="error-message" aria-live="polite"></span>
+      </div>
+      
+      <button type="submit" class="auth-btn" aria-label="Create your account">
+        <span class="btn-text">Register</span>
+        <span class="loading-spinner" aria-hidden="true"></span>
+      </button>
+      
+      <p class="toggle-hint">
+        Already have an account? 
+        <a href="#" id="switch-to-login" class="toggle-link" aria-label="Switch to login form">
+          Login
+        </a>
+      </p>
+    </form>
+  </main>
+
+  <script src="../js/Authentication.js"></script>
+</body>
+</html>

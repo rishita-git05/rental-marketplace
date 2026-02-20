@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - My Rentals</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/rentals.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">RentEase</div>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="Listings.html">My Listings</a>
+      <a href="rentals.html">My Rentals</a>
+      <div class="account-dropdown">
+        <button class="account-btn">
+          <i class="fas fa-user-circle"></i>
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="profile.html">My Profile</a>
+            <a href="#" id="logout-btn">Logout</a>
+          </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="rentals-container">
+    <h1>My Rental Requests</h1>
+    <div id="rentals-list">
+      <!-- Rental items will be inserted here by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Modal for Details -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="modal-title">Rental Details</h2>
+      <div id="modal-body">
+        <!-- Details will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">RentEase</div>
+          <p>Making rentals simple since 2025.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="link-group">
+            <h4>Support</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Help Center</a>
+          </div>
+          <div class="link-group">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 RentEase. All rights reserved.</p>
+      </div>
+    </footer>
+  </footer>
+<script src="../js/header.js"></script>
+  <script src="../js/rentals.js"></script>
+</body>
+</html>

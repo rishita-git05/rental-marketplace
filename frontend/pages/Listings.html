@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - My Listings</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">RentEase</div>
+    <nav class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="Listings.html">My Listings</a>
+      <a href="rentals.html">My Rentals</a>
+      <div class="account-dropdown">
+        <button class="account-btn">
+          <i class="fas fa-user-circle"></i>
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="profile.html">My Profile</a>
+          <a href="#" id="logout-btn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="listings-container">
+    <section class="add-item-section">
+      <h2>Add Rental Item</h2>
+      <form id="add-item-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="item-title">Title</label>
+            <input type="text" id="item-title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="item-image-url">Image URL</label>
+          <input type="url" id="item-image-url" name="imageUrl" required 
+                 placeholder="https://example.com/image.jpg">
+                 <div id="image-preview" style="display: none;"></div>
+        </div>
+      <div class="form-group">
+          <label for="item-price">Price per day (₹)</label>
+          <input type="number" id="item-price" name="price" min="1" required>
+          <div class="form-group">
+            <label for="item-location">Location</label>
+            <select id="item-location" name="location" required>
+            <option value="">Select Location</option>
+            <option value="visakhapatnam">Visakhapatnam</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="chennai">Chennai</option>
+            <option value="delhi">Delhi</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="item-category">Category</label>
+          <select id="item-category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="electronics">Electronics</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="furniture">Furniture</option>
+            <option value="tools">Tools</option>
+            <option value="sports">Sports Equipment</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="item-desc">Description</label>
+          <textarea id="item-desc" name="description" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="add-btn">Add Item</button>
+      </form>
+    </section>
+
+    <section class="my-items-section">
+      <h2>My Listed Items</h2>
+      <div id="my-items-list" class="items-container">
+        <!-- Items will be loaded here -->
+      </div>
+    </section>
+  </main>
+
+<!-- Edit Modal -->
+<div id="editModal" class="editModal">
+  <div class="modal-content" id="modal-content">
+    <span class="close-modal" id="close-modal">&times;</span>
+    <h2>Edit Item</h2>
+    <form id="edit-item-form" class="edit-item-form">
+      <input type="hidden" id="edit-item-id" class="edit-item-id">
+      <div class="form-group">
+        <label for="edit-item-title">Title</label>
+        <input type="text" id="edit-item-title" required>
+      </div>
+      <div class="form-group">
+        <label for="edit-item-image-url">Image URL</label>
+        <input type="url" id="edit-item-image-url" required>
+        <div id="edit-image-preview"></div>
+      </div>
+      <div class="form-group">
+        <label for="edit-item-price">Price</label>
+        <input type="number" id="edit-item-price" required>
+      </div>
+      <div class="form-group">
+        <label for="edit-item-location">Location</label>
+        <select id="edit-item-location" required>
+          <option value="">Select Location</option>
+          <option value="visakhapatnam">Visakhapatnam</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="bangalore">Bangalore</option>
+          <option value="chennai">Chennai</option>
+          <option value="delhi">Delhi</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="edit-item-category">Category</label>
+        <select id="edit-item-category" required>
+          <option value="">Select Category</option>
+          <option value="electronics">Electronics</option>
+          <option value="vehicles">Vehicles</option>
+          <option value="furniture">Furniture</option>
+          <option value="tools">Tools</option>
+          <option value="sports">Sports Equipment</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="edit-item-desc">Description</label>
+        <textarea id="edit-item-desc" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="save-btn">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">RentEase</div>
+          <p>Making rentals simple since 2025.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="link-group">
+            <h4>Support</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Help Center</a>
+          </div>
+          <div class="link-group">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 RentEase. All rights reserved.</p>
+      </div>
+    </footer>
+  </footer>
+  <script src="../js/header.js"></script>
+  <script src="../js/Listings.js"></script>
+</body>
+</html>

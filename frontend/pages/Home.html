@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - Browse Rentals</title>
+  <link rel="stylesheet" href="../css/Home.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">RentEase</div>
+      <div class="nav-links">
+        <a href="Home.html">Home</a>
+        <a href="Listings.html">My Listings</a>
+        <a href="rentals.html">My Rentals</a>
+        <div class="account-dropdown">
+            <button class="account-btn">
+              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="profile.html">My Profile</a>
+                <a href="#" id="logout-btn">Logout</a>
+              </div>
+          </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1 class="page-title">Available Rentals</h1>
+    
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <select id="location-filter" class="filter-select">
+          <option value="all">All Locations</option>
+          <option value="visakhapatnam">Visakhapatnam</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="bangalore">Bangalore</option>
+          <option value="chennai">Chennai</option>
+          <option value="delhi">Delhi</option>
+          <option value="other">Other</option>
+        </select>
+        <button id="apply-filter" class="filter-btn">Apply Filter</button>
+      </div>
+    
+    <div class="rental-grid" id="rental-grid">
+      <!-- Rental Item 1
+      <div class="rental-card">
+        <img src="https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/244/medium/YAMAHA_MT-15.png?1660732312" alt="Yamaha mt 15" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Yamaha&nbsp;MT&nbsp;15</h3>
+          <p class="card-price">₹768/day</p>
+          <button class="rent-btn" onclick="rentItem('Yamaha MT 15', 768)">Rent Now</button>
+        </div>
+      </div>
+
+      
+      <div class="rental-card">
+        <img src="https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/076/medium/BAJAJ__PULSAR_200NS.png?1660727897" alt="Bajaj pulsar ns200" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Bajaj pulsar ns200</h3>
+          <p class="card-price">₹1080/day</p>
+          <button class="rent-btn" onclick="rentItem('Bajaj pulsar ns200', 1080)">Rent Now</button>
+        </div>
+      </div>
+
+      
+      <div class="rental-card">
+        <img src="https://zoomcar-assets.zoomcar.com/950325/HostCarImage/mini_magick20250216-1-1vppyun70711eea-55e0-4d25-ae9b-c41b03cb3894.jpeg" alt="Sonnet 2022" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Sonnet 2022</h3>
+          <p class="card-price">₹4200/day</p>
+          <button class="rent-btn" onclick="rentItem('Sonnet 2022', 4200)">Rent Now</button>
+        </div>
+      </div>
+
+      
+      <div class="rental-card">
+        <img src="https://zoomcar-assets.zoomcar.com/994562/HostCarImage/mini_magick20250331-1-1xnqrix8bbd3f92-a525-4a9e-9e7a-f38425c953b1.jpeg" alt="Fronx 2024" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Fronx 2024</h3>
+          <p class="card-price">₹2976/day</p>
+          <button class="rent-btn" onclick="rentItem('Fronx 2024', 2976)">Rent Now</button>
+        </div>
+      </div>
+
+      
+      <div class="rental-card">
+        <img src="https://images.sharepal.in/categories/cameras/dslr-cameras/canon-eos-r8/canon-r8-on-rent-sharepal-2.webp" alt="Canon eos r8" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Canon eos r8</h3>
+          <p class="card-price">₹2000/day</p>
+          <button class="rent-btn" onclick="rentItem('Canon eos r8', 2000, 'https://images.sharepal.in/categories/cameras/dslr-cameras/canon-eos-r8/canon-r8-on-rent-sharepal-2.webp')">Rent Now</button>
+        </div>
+      </div>
+
+
+      <div class="rental-card">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/350699458/ZQ/FX/MQ/198984442/i-bell-electric-drill-machine-500x500.jpg" alt="Drill machine" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Drill machine</h3>
+          <p class="card-price">₹3000/day</p>
+          <button class="rent-btn" onclick="rentItem('Drill machine', 3000)">Rent Now</button>
+        </div>
+      </div> -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <div class="footer-logo">RentEase</div>
+        <p>Making rentals simple and convenient</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="link-group">
+            <h4>Support</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Help Center</a>
+          </div>
+          <div class="link-group">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 RentEase. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../js/header.js"></script>
+  <script src="../js/Home.js"></script>
+</body>
+</html>
