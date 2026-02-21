@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (confirm('Are you sure you want to logout?')) {
             localStorage.removeItem('authToken');
             localStorage.removeItem('user');
-            window.location.href = 'LandingPage.html';
+            window.location.href = 'index.html';
         }
     });
 

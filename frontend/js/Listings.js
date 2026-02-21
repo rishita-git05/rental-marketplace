@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
           console.error('Error loading profile:', error);
           // Handle unauthorized (redirect to login)
           if (error.message.includes('401')) {
-              window.location.href = 'LandingPage.html';
+              window.location.href = 'index.html';
           }
       }
   }
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         if (confirm('Are you sure you want to logout?')) {
             localStorage.removeItem('authToken');
-            window.location.href = 'LandingPage.html';
+            window.location.href = 'index.html';
         }
     });
 

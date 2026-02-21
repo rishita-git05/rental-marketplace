@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         try {
             const token = localStorage.getItem('authToken');
             if (!token) {
-                window.location.href = 'LandingPage.html';
+                window.location.href = 'index.html';
                 return;
             }
 

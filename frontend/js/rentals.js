@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         try {
             const token = localStorage.getItem('authToken');
             if (!token) {
-                window.location.href = 'LandingPage.html';
+                window.location.href = 'index.html';
                 return [];
             }
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         try {
             const token = localStorage.getItem('authToken');
             if (!token) {
-                window.location.href = 'LandingPage.html';
+                window.location.href = 'index.html';
                 return [];
             }
 
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         e.preventDefault();
         if (confirm('Are you sure you want to logout?')) {
             localStorage.removeItem('authToken');
-            window.location.href = 'LandingPage.html';
+            window.location.href = 'index.html';
         }
     });
 
