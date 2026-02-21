@@ -15,13 +15,6 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 console.log("ENV CHECK:", process.env.MONGODB_URI ? "FOUND" : "MISSING");
-// MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch(err => console.error('MongoDB connection error:', err));
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
