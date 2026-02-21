@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const switchToRegister = document.getElementById('switch-to-register');
     const switchToLogin = document.getElementById('switch-to-login');
 
-    const API_BASE_URL = 'https://rental-marketplace-so44.onrender.com';
+    const API_BASE_URL = 'https://rental-marketplace-so44.onrender.com/api';
 
     checkInitialTab();
 
