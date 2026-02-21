@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const API_BASE_URL = 'http://localhost:5000';
+  const API_BASE_URL = 'https://rental-marketplace-so44.onrender.com';
    let currentUser = null;
 
   // Initialize the page

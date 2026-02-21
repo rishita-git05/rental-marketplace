@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 return [];
             }
 
-            const response = await fetch('http://localhost:5000/api/rentals', {
+            const response = await fetch('https://rental-marketplace-so44.onrender.com/api/rentals', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 return [];
             }
 
-            const response = await fetch('http://localhost:5000/api/rentals', {
+            const response = await fetch('https://rental-marketplace-so44.onrender.com/api/rentals', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/api/rentals/${rentalId}`, {
+            const response = await fetch(`https://rental-marketplace-so44.onrender.com/api/rentals/${rentalId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('authToken')}`

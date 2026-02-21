@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 return;
             }
 
-            const response = await fetch('http://localhost:5000/api/user', {
+            const response = await fetch('https://rental-marketplace-so44.onrender.com/api/user', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Save profile to server
     async function saveProfile(profileData) {
         try {
-            const response = await fetch('http://localhost:5000/api/user', {
+            const response = await fetch('https://rental-marketplace-so44.onrender.com/api/user', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         formData.append('avatar', file);
         
         try {
-            const response = await fetch('http://localhost:5000/api/user/avatar', {
+            const response = await fetch('https://rental-marketplace-so44.onrender.com/api/user/avatar', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('authToken')}`

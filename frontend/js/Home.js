@@ -119,7 +119,7 @@ async function rentItem(itemId) {
         rentBtn.disabled = true;
         rentBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-        const response = await fetch('http://localhost:5000/api/rentals', {
+        const response = await fetch('https://rental-marketplace-so44.onrender.com/api/rentals', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ async function rentItem(itemId) {
             return;
         }
 
-        const response = await fetch('http://localhost:5000/api/rentals', {
+        const response = await fetch('https://rental-marketplace-so44.onrender.com/api/rentals', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
